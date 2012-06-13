@@ -1,9 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Login_model extends MY_Model
-{
-    protected $table = 'user';
-    
+{   
     public function login($username, $password)
     {
         $user = $this->db->select('*')

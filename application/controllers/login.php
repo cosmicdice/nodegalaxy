@@ -10,7 +10,7 @@ class Login extends CI_Controller
 		$this->load->view('common/footer');
             }	
             else {
-     		redirect('home', 'refresh');
+     		redirect('galaxy', 'refresh');
             }		
 	}
 	//Called from login form
