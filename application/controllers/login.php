@@ -6,6 +6,7 @@ class Login extends CI_Controller
             $user = $this->session->userdata('user');
             if ($user === false) {
                 $this->load->view('common/header');
+                $this->load->view('common/title');
 		$this->load->view('common/login');
 		$this->load->view('common/footer');
             }	

@@ -1,21 +1,46 @@
 body{
+    background-color: #eee;
+}
+
+#page{
+    background-color: white;
+    width: 960px;
+    min-height: 100%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 0 8px black;
     
+}
+#title {
+    
+}
+#login {
+    text-align: center;
 }
 
 a{
     color : gray;
     font-weight: bold;
 }
+
+i{
+    color:gray;
+}
+
 a:hover{
     color : black;
     text-decoration: none;
 }
 
+#title a{
+    color : black;
+}
+#title a:hover{
+    color : gray;
+}
+
 .node_title a {
     font-size: 16px;
-}
-.btn {
-    padding: 2px;
 }
 
 .node_footer{
@@ -23,19 +48,16 @@ a:hover{
 }
 
 .node{
-    margin: 10px 20px;
-    margin-bottom: 5px;
+    margin: 0px;
+    margin-top:10px;
+    /*margin-bottom: 0px;*/
     padding : 5px;
+    padding-left : 20px;
     
-    box-shadow: -2px -2px 3px #333;
-    /*
-    border-color: black;
-    border-style: solid;
-    border-width: 1px;
-    border-right-style: hidden;
-    border-bottom-style: hidden;
-    */
-    border-top-left-radius: 3px;
+    box-shadow: -1px -1px 6px black;
+
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     /*
     height:600px;
     overflow:scroll;
