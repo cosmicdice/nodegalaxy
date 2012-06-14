@@ -22,7 +22,6 @@ class Galaxy_model extends MY_Model
         }
         
         //recursive exploration
-        //To make iterative if the execution pile don't support it
         //To limit in depth
         public function explore($id_root){
                 $root = $this->get_node($id_root);
@@ -33,14 +32,21 @@ class Galaxy_model extends MY_Model
                 }
                 return $root;
         }
-        protected function explore_node($node) {
-                //TODO : get author, public, non existing
-                $node->children = $this->db->select('*')
+        protected function explore_node($node, $depth = 5) {
+                //TODO : get author, public, non existing, weight...
+                $children = $this->db->select('*')
                                             ->from('node')
                                             ->where(array('id_parent' => $node->id))
                                             ->get()->result();
-                foreach($node->children as $child)
-                    $child = $this->explore_node($child);
+                if ($depth <=0) {
+                    $node->children = array();
+                    $node->more = (empty($children))? false : true;
+                }
+                else {
+                    $node->children = $children;
+                    foreach($node->children as $child)
+                        $child = $this->explore_node($child, $depth-1);
+                }
                 return $node;
         }
 }
