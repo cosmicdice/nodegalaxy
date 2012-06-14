@@ -4,6 +4,6 @@
                                         <input type="text" name="username" value="" />
                                         <label for="mdp"><strong> Password: </strong></label>
                                         <input type="password" name="password" value="" />
-					<input class = "btn btn-primary" type="submit" value="Submit" />
+					<input class = "btn" type="submit" value="Submit" />
                                     </form>
 				</div></p>

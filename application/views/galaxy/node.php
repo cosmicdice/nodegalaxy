@@ -29,10 +29,10 @@
                                 }
                                 function reply_form(id_node) {
                                     var str = ' ';
-                                    str += '<p><form method="post" action = "<?php echo(site_url('galaxy/create')); ?>">';
-                                    str += '<input class = "title-input" type="text" name="title"/><br/>';
-                                    str += '<textarea class = "text-input" name = "text"></textarea> <br/>';
-                                    str += '<input class = "link-input" type="text" name="link"><br/>';
+                                    str += '<p><form class="form-inline" method="post" action = "<?php echo(site_url('galaxy/create')); ?>">';
+                                    str += '<input class = "title-input" type="text" name="title" /> ';
+                                    str += '<textarea class = "text-input" name = "text" rows="1"></textarea> ';
+                                    str += '<input class = "link-input" type="text" name="link"> ';
                                     str += '<input class = "btn btn" type="submit" value="Submit" />';
                                     str += '';
                                     str += '';

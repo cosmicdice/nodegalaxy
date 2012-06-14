@@ -1,7 +1,6 @@
 body{
     background-color: #eee;
 }
-
 #page{
     background-color: white;
     width: 960px;
@@ -9,12 +8,9 @@ body{
     margin: auto;
     padding: 20px;
     box-shadow: 0 0 8px black;
-    
+    border-bottom-right-radius: 20px;
 }
-#title {
-    
-}
-#login {
+#login, form {
     text-align: center;
 }
 
