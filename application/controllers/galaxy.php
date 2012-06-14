@@ -9,7 +9,7 @@ class Galaxy extends Base_Controller {
                 redirect('galaxy/node/1', 'refresh');
 	}
         
-        public function node($id_node) {
+        public function node($id_node = 1) { //use default node when prefs added to class
             $node = $this->galaxy_model->explore($id_node);
             $view_data = array('node'=>$node);
             

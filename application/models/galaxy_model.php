@@ -32,15 +32,16 @@ class Galaxy_model extends MY_Model
                 }
                 return $root;
         }
-        protected function explore_node($node, $depth = 5) {
-                //TODO : get author, public, non existing, weight...
+        protected function explore_node($node, $depth = 5, $orderby = 'weight', $orderby_mode = 'desc') {
+                //TODO : get author, public, non existing ?
+                       //parameter to set orderby? date/weight asc or desc, or random
                 $children = $this->db->select('*')
                                             ->from('node')
                                             ->where(array('id_parent' => $node->id))
+                                            ->order_by($orderby,$orderby_mode)
                                             ->get()->result();
                 if ($depth <=0) {
                     $node->children = array();
-                    $node->more = (empty($children))? false : true;
                 }
                 else {
                     $node->children = $children;

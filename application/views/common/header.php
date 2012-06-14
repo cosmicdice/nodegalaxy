@@ -8,6 +8,7 @@
 		<link href="<?php echo css_url('style'); ?>" type="text/css" rel="stylesheet" />
 		<script src="<?php echo js_url('jquery'); ?>"></script>
 		<script src="<?php echo js_url('jquery.validate.min'); ?>"></script>
+                <script src="<?php echo js_url('jquery.watermark.min'); ?>"></script>
 		<script src="<?php echo bootjs_url(); ?>"></script>
 		<script src="<?php echo datatablesjs_url(); ?>"></script>
 		<script src="<?php echo js_url('common'); ?>"></script>
