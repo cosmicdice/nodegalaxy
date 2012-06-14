@@ -5,8 +5,8 @@
                                     echo('<div class ="node" id = "'.$node->id.'">');
                                         echo('<h3>
                                             <a href = "'. $node->link .'">'. $linktext .'</a>
-                                            <a href="'.h(site_url('galaxy/explore/'.$node->id)).'">'.h($node->title).'</a>'
-                                            .' <a href="'.h(site_url('galaxy/explore/'.$idparent)).'">'.'&#x21b0'.'</a></h3>');
+                                            <a href="'.h(site_url('galaxy/node/'.$node->id)).'">'.h($node->title).'</a>'
+                                            .' <a href="'.h(site_url('galaxy/node/'.$idparent)).'">'.'&#x21b0'.'</a></h3>');
                                         echo('<p>'.h($node->text).'</p>');
                                         echo('<p class = "date"><i>'.h($node->date).'</i></p>');
                                         foreach ($node->children as $child)

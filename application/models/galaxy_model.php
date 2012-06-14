@@ -49,4 +49,15 @@ class Galaxy_model extends MY_Model
                 }
                 return $node;
         }
+        public function refresh_added($node_id){ //refresh the branch with $node_id id of node added
+                $current_node = $this->get_node($node_id);
+                $current_node->weight = 0;
+                while ($current_node !== false) {
+                    $success = (bool) $this->db->set(array('weight' => $current_node->weight +1))
+                    				->set(array('update' => 'CURRENT_TIMESTAMP'), null,false)
+                    				->where(array('id' => $current_node->id))
+                    				->update('node');
+                    $current_node = $this->get_node($current_node->id_parent);
+                }
+        }
 }
